@@ -25,11 +25,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         lihatBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(LihatTeman.getActIntent(MainActivity.this));
             }
         });
+
     }
 }

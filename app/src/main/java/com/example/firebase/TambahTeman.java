@@ -14,10 +14,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class TambahTeman extends AppCompatActivity {
-    private EditText edNama,edTelpon;
-    private Button submitBtn;
+    EditText edNama,edTelpon;
+    Button submitBtn;
     private DatabaseReference database;
     String nm,tlp;
+
 
 
     @Override
@@ -50,6 +51,7 @@ public class TambahTeman extends AppCompatActivity {
         });
 
     }
+
 
     private  void submitTeman(Teman tmn){
         database.child("Teman").push().setValue(tmn).addOnSuccessListener(this, new OnSuccessListener<Void>() {
